@@ -22,5 +22,5 @@ int main()
     cout << "The maximum is --> " << totalmax;
     return 0;
 }
-// 6
+// .6
 // 1 5 8 6 3 4
