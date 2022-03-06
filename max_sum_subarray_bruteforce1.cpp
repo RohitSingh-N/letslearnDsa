@@ -27,4 +27,4 @@ int main()
 
     return 0;
 }
-//tc-O(n^3)
+//tc-O(n^3)..
