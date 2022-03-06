@@ -11,7 +11,7 @@ int main(){
 	}
 }
 
-/*output
+/*output..
 1
 22
 333
