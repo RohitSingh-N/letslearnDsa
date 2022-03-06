@@ -1,4 +1,4 @@
-// Given a positive integer N, print count of set bits in it.
+// Given a positive integer N, print count of set bits in it..
 #include <iostream>
 #include <bits.h>
 class Solution
