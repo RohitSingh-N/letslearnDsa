@@ -30,7 +30,7 @@ int findPeakUtil(int arr[], int low,
             arr, (mid + 1), high, n);
 }
 
-// A wrapper over recursive function findPeakUtil()
+// A wrapper over recursive function findPeakUtil()..
 int findPeak(int arr[], int n)
 {
     return findPeakUtil(arr, 0, n - 1, n);
