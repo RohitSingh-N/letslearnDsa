@@ -6,7 +6,7 @@ public:
     int findlargest(int n)
     {
         int x = 0;
-        // (1<<x) means 2 (tothepower) x
+        // (1<<x) means 2 (tothepower) x.
         while ((1 << x) <= n)
         {
             // we are incrementing x till less then power of 2 is less than n because we want to find a set of bits
