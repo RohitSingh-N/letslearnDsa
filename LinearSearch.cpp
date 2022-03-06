@@ -32,5 +32,5 @@ int main()
 /*input-->n=5
 arr= 10 20 30 40 50
 key= 20
-output-> element is present at index 1;
+output-> element is present at index 1;..
 */
