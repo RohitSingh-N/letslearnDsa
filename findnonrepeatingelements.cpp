@@ -35,3 +35,4 @@ int main()
     cout << "The non-repeating elements are " << *a
          << " and " << *b;
 }
+//..
