@@ -21,5 +21,5 @@ int main()
     return 0;
 }
 
-/*input-->5
+/*input-->5.
 output-->120 */
