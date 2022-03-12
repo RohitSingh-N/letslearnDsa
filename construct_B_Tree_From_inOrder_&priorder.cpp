@@ -25,7 +25,7 @@ int findpos(int in[], int element, int n)
     }
     return -1;
 }
-node *solve(node *root, int in[], int pre[], int index, int inorderstart, int inorderend, int n)
+node *solve(int in[], int pre[], int &index, int inorderstart, int inorderend, int n)
 {
     if ((index >= n) || (inorderstart > inorderend))
     {
@@ -35,14 +35,14 @@ node *solve(node *root, int in[], int pre[], int index, int inorderstart, int in
     node *root = new node(element);
     int pos = findpos(in, element, n);
 
-    solve(root->left, in, pre, index, inorderstart, pos - 1, n);
-    solve(root->right, in, pre, index, pos + 1, inorderend, n);
+    root->left = solve(in, pre, index, inorderstart, pos - 1, n);
+    root->right = solve(in, pre, index, pos + 1, inorderend, n);
     return root;
 }
-node *buildfrompreorder_inorder(node *root, int in[], int pre[], int n)
+node *buildfrompreorder_inorder(int in[], int pre[], int n)
 {
     int preorderStarting = 0;
-    node *ans = solve(root, in, pre, preorderStarting, 0, n - 1, n);
+    node *ans = solve(in, pre, preorderStarting, 0, n - 1, n);
     return ans;
 }
 void postorder(node *root) // LRN
@@ -61,7 +61,7 @@ int main()
     node *root = NULL;
     int in[] = {3, 1, 4, 0, 5, 2};
     int pre[] = {0, 1, 3, 4, 2, 5};
-    root = buildfrompreorder_inorder(root, in, pre, 6);
+    root = buildfrompreorder_inorder(in, pre, 6);
     postorder(root);
     return 0;
 }
